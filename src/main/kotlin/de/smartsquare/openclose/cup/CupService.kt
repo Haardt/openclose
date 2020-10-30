@@ -1,5 +1,6 @@
 package de.smartsquare.openclose.cup
 
+import de.smartsquare.openclose.IcecreamBall
 import de.smartsquare.openclose.chocolate.ChocolateBall
 import de.smartsquare.openclose.malaga.MalagaBall
 import de.smartsquare.openclose.straciatella.StraciatellaBall
@@ -13,21 +14,13 @@ class CupService {
 
     // Darn! This function has too many parameters! Please refactor.
     fun fillCup(
-        vanillaBalls: List<VanillaBall>,
-        chocolateBalls: List<ChocolateBall>,
-        straciatellaBalls: List<StraciatellaBall>,
-        malagaBalls: List<MalagaBall>,
-        strawberryBalls: List<StrawberryBall>,
+        balls: List<IcecreamBall>,
         cream: Cream? = null,
         chocolateSprinkles: ChocolateSprinkles? = null,
         rainbowSprinkles: RainbowSprinkles? = null
     ): Cup {
         return Cup(
-            vanillaBalls,
-            chocolateBalls,
-            straciatellaBalls,
-            malagaBalls,
-            strawberryBalls,
+            balls,
             cream,
             chocolateSprinkles,
             rainbowSprinkles

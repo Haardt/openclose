@@ -1,3 +1,5 @@
 package de.smartsquare.openclose.vanilla
 
-data class VanillaBall(val diameter: Float)
+import de.smartsquare.openclose.IcecreamBall
+
+data class VanillaBall(val diameter: Float): IcecreamBall

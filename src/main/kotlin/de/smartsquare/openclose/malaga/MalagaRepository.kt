@@ -6,4 +6,9 @@ class MalagaRepository {
         // definitely NO rainins!
         return MalagaBall(1.25F, false)
     }
+
+    fun scrapeBallWithRaisin(): MalagaBall {
+        // definitely NO rainins!
+        return MalagaBall(1.25F, true)
+    }
 }
