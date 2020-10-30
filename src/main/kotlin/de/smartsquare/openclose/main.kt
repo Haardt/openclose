@@ -10,12 +10,13 @@ import de.smartsquare.openclose.vanilla.VanillaRepository
 fun main() {
     val counterService = CounterService(
         listOf(
-            { ChocolateRepository().run { scrapeBall() } },
-            { MalagaRepository().run { scrapeBall() } },
-            { MalagaRepository().run { scrapeBallWithRaisin() } },
-            { StraciatellaRepository().run { scrapeBall() } },
-            { StrawberryRepository().run { scrapeBall() } },
-            { VanillaRepository().run { scrapeBall() } }),
+            ChocolateRepository(),
+            MalagaRepository(),
+            MalagaRepository(),
+            StraciatellaRepository(),
+            StrawberryRepository(),
+            VanillaRepository()
+        ),
         CupService()
     )
 

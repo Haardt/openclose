@@ -1,6 +1,9 @@
 package de.smartsquare.openclose.malaga
 
-class MalagaRepository {
+import de.smartsquare.openclose.scraper.Scrapable
+import de.smartsquare.openclose.scraper.Scraper
+
+class MalagaRepository: Scrapable {
 
     fun scrapeBall(): MalagaBall {
         // definitely NO rainins!
@@ -8,7 +11,8 @@ class MalagaRepository {
     }
 
     fun scrapeBallWithRaisin(): MalagaBall {
-        // definitely NO rainins!
         return MalagaBall(1.25F, true)
     }
+
+    override fun scrapeWith(scraper: Scraper) = scraper.scrape(this)
 }
