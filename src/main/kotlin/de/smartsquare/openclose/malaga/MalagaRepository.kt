@@ -1,9 +1,9 @@
 package de.smartsquare.openclose.malaga
 
-import de.smartsquare.openclose.scraper.Scrapable
+import de.smartsquare.openclose.scraper.Scrapeable
 import de.smartsquare.openclose.scraper.Scraper
 
-class MalagaRepository: Scrapable {
+class MalagaRepository: Scrapeable {
 
     fun scrapeBall(): MalagaBall {
         // definitely NO rainins!

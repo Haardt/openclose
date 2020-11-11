@@ -1,9 +1,9 @@
 package de.smartsquare.openclose.straciatella
 
-import de.smartsquare.openclose.scraper.Scrapable
+import de.smartsquare.openclose.scraper.Scrapeable
 import de.smartsquare.openclose.scraper.Scraper
 
-class StraciatellaRepository: Scrapable {
+class StraciatellaRepository: Scrapeable {
 
     fun scrapeBall(): StraciatellaBall {
         return StraciatellaBall(1.25F)

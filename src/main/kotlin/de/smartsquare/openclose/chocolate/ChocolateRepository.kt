@@ -1,9 +1,9 @@
 package de.smartsquare.openclose.chocolate
 
-import de.smartsquare.openclose.scraper.Scrapable
+import de.smartsquare.openclose.scraper.Scrapeable
 import de.smartsquare.openclose.scraper.Scraper
 
-class ChocolateRepository: Scrapable {
+class ChocolateRepository: Scrapeable {
 
     fun scrapeBall(): ChocolateBall {
         return ChocolateBall(1.25F)

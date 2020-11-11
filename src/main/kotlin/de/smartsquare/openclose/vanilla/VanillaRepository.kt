@@ -1,9 +1,9 @@
 package de.smartsquare.openclose.vanilla
 
-import de.smartsquare.openclose.scraper.Scrapable
+import de.smartsquare.openclose.scraper.Scrapeable
 import de.smartsquare.openclose.scraper.Scraper
 
-class VanillaRepository: Scrapable {
+class VanillaRepository: Scrapeable {
 
     fun scrapeBall(): VanillaBall {
         return VanillaBall(1.25F)
