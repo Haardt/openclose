@@ -4,17 +4,15 @@ import de.smartsquare.openclose.cup.Cup
 import de.smartsquare.openclose.cup.CupService
 import de.smartsquare.openclose.topping.Cream
 
-typealias Scrapable = () -> IcecreamBall
-
 class CounterService(
-    private val scrapables: List<Scrapable>,
+    private val icecreameRepository: IcecreamballRepository,
     private val cupService: CupService
 ) {
 
-    fun serveIcecream(): Cup {
-        val balls = scrapables.map { it() }
+    fun serveIcecream(icecreamBalls: List<IcecreamBall>): Cup {
+        val balls = icecreamBalls.map { icecreameRepository.scrapeBall(it, 1.0f) }
         return cupService.fillCup(
-            balls,
+            balls.filterIsInstance<Scrape.Success>().map { it.icecreamball },
             Cream(0.5F, true),
             null,
             null
