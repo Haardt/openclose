@@ -1,8 +1,5 @@
 package de.smartsquare.openclose
 
-
-
-
 data class ScrapedIcecreamball private constructor(val type: IcecreamBall, val diameter: Float) {
     companion object {
         operator fun invoke(type: IcecreamBall, diameter: Float): ScrapedIcecreamball? {
